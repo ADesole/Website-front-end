@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <title>Frontend Mentor | E-commerce product page</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <div class= "headerBar">
+  <nav class="navbar navbar-expand-md navbar-light bg-white">
+    <a class="navbar-brand" href="#"><img src=".\images\logo.svg" alt="cart" class="iconLogo">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Collections</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Men</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Women</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="#">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="#">Contact</a>
+        </li>
+      </ul>
+      <a class="nav-link" href="#"><img src=".\images\icon-cart.svg" alt="cart" class="iconCart">
+      </a>
+      <a class="nav-link" href="#"><img src=".\images\image-avatar.png" alt="cart" class="iconHead">
+      </a>
+    </div>
+  </nav>
+  <hr>
+</div>
+
+<div class="container-fluid bodyCont">
+	<div class="row">
+		<div class="col-md-3">
+		</div>
+		<div class="col-md-3">
+      <img src=".\images\image-product-1.jpg" onclick="openLightbox();toSlide(1)" alt="cart" class="imageMain">
+      <div class = "smallThumb" >
+      <img src=".\images\image-product-1-thumbnail.jpg" onclick="openLightbox();toSlide(1)" alt="cart" class="imageThumb">
+      <img src=".\images\image-product-2-thumbnail.jpg" onclick="openLightbox();toSlide(2)"alt="cart" class="imageThumb">
+      <img src=".\images\image-product-3-thumbnail.jpg" onclick="openLightbox();toSlide(3)" alt="cart" class="imageThumb">
+      <img src=".\images\image-product-4-thumbnail.jpg" onclick="openLightbox();toSlide(4)" alt="cart" class="imageThumb">
+
+
+      </div>
+
+
+		</div>
+		<div class="col-md-3 textContainer">
+      <p class="maker">Sneaker Company</p>
+      <p class="titleBold">Fall Limited Edition Sneakers</p>
+      <p class="descr">These low-profile sneakers are your perfect casual wear companion. Featuring a 
+        durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
+      <p class="PriceBold"> $125.00 <span class="discount"> 50% </span></p>
+      <p class="orignalPrice">  $250.00      </p>
+      <div class="messCont">
+        <div class="quantity"> 
+          <a href="#">
+        <img src=".\images\icon-minus.svg" alt="cart" class="imageQuantMin">
+      </a>
+        0
+        <a href="#">
+        <img src=".\images\icon-plus.svg" alt="cart" class="imageQuantPlus">
+      </a>
+        </div>
+        <a href="#">
+        <div class="addToCart"><img src=".\images\icon-cart.svg" alt="cart" class="iconCart">
+          Add to cart</div>
+      </a>
+      </div>
+      
+		</div>
+		<div class="col-md-3">
+		</div>
+	</div>
+</div>
+ 
+ <div id="Lightbox" class="modal">
+ 
+  <span class="close pointer" onclick="closeLightbox()">&times;</span>
+  <div class="modal-content">
+   <div class="slide">
+    <img src=".\images\image-product-1.jpg" class="image-slide" />
+   </div>
+   <div class="slide">
+    <img src=".\images\image-product-2.jpg" class="image-slide"/>
+   </div>
+   <div class="slide">
+    <img src=".\images\image-product-3.jpg" class="image-slide"/>
+   </div>
+   <div class="slide">
+    <img src=".\images\image-product-4.jpg" class="image-slide"/>
+   </div>
+ 
+   <a class="previous" onclick="changeSlide(-1)">&#10094;</a>
+   <a class="next" onclick="changeSlide(1)">&#10095;</a>
+ 
+   <div class="dots">
+    <div class="col">
+     <img src=".\images\image-product-1.jpg" class="modal-preview hover-shadow" onclick="toSlide(1)" alt="Toy Car Touring City">
+    </div>
+    <div class="col">
+     <img src=".\images\image-product-2.jpg" class="modal-preview hover-shadow" onclick="toSlide(2)" alt="Toy Car Touring City">
+    </div>
+    <div class="col">
+     <img src=".\images\image-product-3.jpg" class="modal-preview hover-shadow" onclick="toSlide(3)" alt="Toy Car Touring City">
+     <div class="col">
+      <img src=".\images\image-product-4.jpg" class="modal-preview hover-shadow" onclick="toSlide(4)" alt="Toy Car Touring City">
+     </div>
+    </div>
+   </div>
+  </div>
+ </div>
+
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="script.js"></script>
+</body>
+</html>
